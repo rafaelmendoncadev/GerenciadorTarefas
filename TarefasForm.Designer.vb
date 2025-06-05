@@ -22,99 +22,197 @@ Partial Class TarefasForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Label1 = New Label()
-        txtTitulo = New TextBox()
-        Label2 = New Label()
-        txtDescricao = New TextBox()
-        dgvTarefas = New DataGridView()
-        btnNovo = New Button()
-        btnSalvar = New Button()
-        btnEditar = New Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TarefasForm))
+        btnSair = New Button()
         btnExcluir = New Button()
+        btnEditar = New Button()
+        btnSalvar = New Button()
+        btnNovo = New Button()
+        dgvTarefas = New DataGridView()
+        txtDescricao = New TextBox()
+        Label2 = New Label()
+        txtTitulo = New TextBox()
+        Label1 = New Label()
+        Label3 = New Label()
+        cbStatus = New ComboBox()
+        Label4 = New Label()
+        Panel1 = New Panel()
+        Label5 = New Label()
         CType(dgvTarefas, ComponentModel.ISupportInitialize).BeginInit()
+        Panel1.SuspendLayout()
         SuspendLayout()
         ' 
-        ' Label1
+        ' btnSair
         ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(12, 9)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(37, 15)
-        Label1.TabIndex = 0
-        Label1.Text = "Título"
+        btnSair.BackColor = Color.White
+        btnSair.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnSair.Location = New Point(571, 407)
+        btnSair.Name = "btnSair"
+        btnSair.Size = New Size(130, 49)
+        btnSair.TabIndex = 30
+        btnSair.Text = "Sair"
+        btnSair.UseVisualStyleBackColor = False
         ' 
-        ' txtTitulo
+        ' btnExcluir
         ' 
-        txtTitulo.Location = New Point(55, 6)
-        txtTitulo.Name = "txtTitulo"
-        txtTitulo.Size = New Size(100, 23)
-        txtTitulo.TabIndex = 1
+        btnExcluir.BackColor = Color.White
+        btnExcluir.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnExcluir.Location = New Point(334, 423)
+        btnExcluir.Name = "btnExcluir"
+        btnExcluir.Size = New Size(73, 33)
+        btnExcluir.TabIndex = 29
+        btnExcluir.Text = "Excluir"
+        btnExcluir.UseVisualStyleBackColor = False
+        ' 
+        ' btnEditar
+        ' 
+        btnEditar.BackColor = Color.White
+        btnEditar.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnEditar.Location = New Point(253, 423)
+        btnEditar.Name = "btnEditar"
+        btnEditar.Size = New Size(73, 33)
+        btnEditar.TabIndex = 28
+        btnEditar.Text = "Editar"
+        btnEditar.UseVisualStyleBackColor = False
+        ' 
+        ' btnSalvar
+        ' 
+        btnSalvar.BackColor = Color.White
+        btnSalvar.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnSalvar.Location = New Point(172, 423)
+        btnSalvar.Name = "btnSalvar"
+        btnSalvar.Size = New Size(73, 33)
+        btnSalvar.TabIndex = 27
+        btnSalvar.Text = "Salvar"
+        btnSalvar.UseVisualStyleBackColor = False
+        ' 
+        ' btnNovo
+        ' 
+        btnNovo.BackColor = Color.White
+        btnNovo.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnNovo.Location = New Point(86, 423)
+        btnNovo.Name = "btnNovo"
+        btnNovo.Size = New Size(78, 33)
+        btnNovo.TabIndex = 26
+        btnNovo.Text = "Novo"
+        btnNovo.UseVisualStyleBackColor = False
+        ' 
+        ' dgvTarefas
+        ' 
+        dgvTarefas.BackgroundColor = Color.White
+        dgvTarefas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvTarefas.Location = New Point(88, 243)
+        dgvTarefas.Name = "dgvTarefas"
+        dgvTarefas.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvTarefas.Size = New Size(613, 150)
+        dgvTarefas.TabIndex = 25
+        ' 
+        ' txtDescricao
+        ' 
+        txtDescricao.BackColor = Color.White
+        txtDescricao.ForeColor = SystemColors.InfoText
+        txtDescricao.Location = New Point(88, 202)
+        txtDescricao.Name = "txtDescricao"
+        txtDescricao.Size = New Size(404, 23)
+        txtDescricao.TabIndex = 24
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(12, 50)
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = Color.Black
+        Label2.Location = New Point(243, 160)
         Label2.Name = "Label2"
-        Label2.Size = New Size(58, 15)
-        Label2.TabIndex = 2
+        Label2.Size = New Size(106, 30)
+        Label2.TabIndex = 23
         Label2.Text = "Descrição"
         ' 
-        ' txtDescricao
+        ' txtTitulo
         ' 
-        txtDescricao.Location = New Point(76, 47)
-        txtDescricao.Name = "txtDescricao"
-        txtDescricao.Size = New Size(100, 23)
-        txtDescricao.TabIndex = 3
+        txtTitulo.BackColor = Color.White
+        txtTitulo.ForeColor = SystemColors.InfoText
+        txtTitulo.Location = New Point(88, 118)
+        txtTitulo.Name = "txtTitulo"
+        txtTitulo.Size = New Size(401, 23)
+        txtTitulo.TabIndex = 22
         ' 
-        ' dgvTarefas
+        ' Label1
         ' 
-        dgvTarefas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvTarefas.Location = New Point(12, 91)
-        dgvTarefas.Name = "dgvTarefas"
-        dgvTarefas.Size = New Size(480, 150)
-        dgvTarefas.TabIndex = 4
+        Label1.AutoSize = True
+        Label1.BackColor = Color.Transparent
+        Label1.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = Color.Black
+        Label1.Location = New Point(253, 85)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(71, 30)
+        Label1.TabIndex = 21
+        Label1.Text = "Título"
         ' 
-        ' btnNovo
+        ' Label3
         ' 
-        btnNovo.Location = New Point(69, 283)
-        btnNovo.Name = "btnNovo"
-        btnNovo.Size = New Size(75, 23)
-        btnNovo.TabIndex = 5
-        btnNovo.Text = "Novo"
-        btnNovo.UseVisualStyleBackColor = True
+        Label3.AutoSize = True
+        Label3.BackColor = Color.Transparent
+        Label3.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = Color.Black
+        Label3.Location = New Point(221, 10)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(311, 45)
+        Label3.TabIndex = 31
+        Label3.Text = "Controle de Tarefas"
         ' 
-        ' btnSalvar
+        ' cbStatus
         ' 
-        btnSalvar.Location = New Point(158, 283)
-        btnSalvar.Name = "btnSalvar"
-        btnSalvar.Size = New Size(75, 23)
-        btnSalvar.TabIndex = 6
-        btnSalvar.Text = "Salvar"
-        btnSalvar.UseVisualStyleBackColor = True
+        cbStatus.FormattingEnabled = True
+        cbStatus.Items.AddRange(New Object() {"Pendente", "Em Andamento", "Concluída"})
+        cbStatus.Location = New Point(565, 204)
+        cbStatus.Name = "cbStatus"
+        cbStatus.Size = New Size(136, 23)
+        cbStatus.TabIndex = 32
         ' 
-        ' btnEditar
+        ' Label4
         ' 
-        btnEditar.Location = New Point(249, 283)
-        btnEditar.Name = "btnEditar"
-        btnEditar.Size = New Size(75, 23)
-        btnEditar.TabIndex = 7
-        btnEditar.Text = "Editar"
-        btnEditar.UseVisualStyleBackColor = True
+        Label4.AutoSize = True
+        Label4.BackColor = Color.Transparent
+        Label4.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Location = New Point(498, 202)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(61, 21)
+        Label4.TabIndex = 33
+        Label4.Text = "Status:"
         ' 
-        ' btnExcluir
+        ' Panel1
         ' 
-        btnExcluir.Location = New Point(345, 283)
-        btnExcluir.Name = "btnExcluir"
-        btnExcluir.Size = New Size(75, 23)
-        btnExcluir.TabIndex = 8
-        btnExcluir.Text = "Excluir"
-        btnExcluir.UseVisualStyleBackColor = True
+        Panel1.BackColor = Color.White
+        Panel1.Controls.Add(Label3)
+        Panel1.Location = New Point(22, 10)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(766, 72)
+        Panel1.TabIndex = 34
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.BackColor = Color.Transparent
+        Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.ForeColor = Color.White
+        Label5.Location = New Point(661, 463)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(127, 21)
+        Label5.TabIndex = 35
+        Label5.Text = "(61)99851-9524"
         ' 
         ' TarefasForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        BackColor = SystemColors.Info
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        ClientSize = New Size(800, 493)
+        Controls.Add(Label5)
+        Controls.Add(Label4)
+        Controls.Add(cbStatus)
+        Controls.Add(btnSair)
         Controls.Add(btnExcluir)
         Controls.Add(btnEditar)
         Controls.Add(btnSalvar)
@@ -124,23 +222,31 @@ Partial Class TarefasForm
         Controls.Add(Label2)
         Controls.Add(txtTitulo)
         Controls.Add(Label1)
+        Controls.Add(Panel1)
+        FormBorderStyle = FormBorderStyle.None
         Name = "TarefasForm"
-        Text = "Form1"
-        ' Remova ou comente a linha abaixo:
-        ' Me.MainForm = Global.GerenciadorTarefas.TarefasForm
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Gerenciador de Tarefas"
         CType(dgvTarefas, ComponentModel.ISupportInitialize).EndInit()
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents Label1 As Label
-    Friend WithEvents txtTitulo As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtDescricao As TextBox
-    Friend WithEvents dgvTarefas As DataGridView
-    Friend WithEvents btnNovo As Button
-    Friend WithEvents btnSalvar As Button
-    Friend WithEvents btnEditar As Button
+    Friend WithEvents btnSair As Button
     Friend WithEvents btnExcluir As Button
+    Friend WithEvents btnEditar As Button
+    Friend WithEvents btnSalvar As Button
+    Friend WithEvents btnNovo As Button
+    Friend WithEvents dgvTarefas As DataGridView
+    Friend WithEvents txtDescricao As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtTitulo As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents cbStatus As ComboBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label5 As Label
 
 End Class
